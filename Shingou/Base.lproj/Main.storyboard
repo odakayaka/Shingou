@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shingou" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="amw-GZ-Zai">
+                                <rect key="frame" x="-34" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="signal_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="KlT-xf-kRu">
+                                <rect key="frame" x="108" y="119" width="265" height="82"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="しんごうのいろはなにいろ？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AED-FG-3vt">
+                                <rect key="frame" x="93" y="45" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.34586826100000001" blue="0.42618830829999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-Gb-1ej">
+                                <rect key="frame" x="108" y="209" width="265" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0Hr-BW-Jeo"/>
+                                    <constraint firstAttribute="width" constant="260" id="wkU-K5-zdc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebW-ar-0oZ">
+                                <rect key="frame" x="80" y="236" width="72" height="81"/>
+                                <state key="normal" image="btn_blue_off.png"/>
+                                <state key="highlighted" image="btn_blue_on.png"/>
+                                <connections>
+                                    <action selector="blueBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOf-tq-naF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-Qt-rbR">
+                                <rect key="frame" x="204" y="236" width="72" height="81"/>
+                                <state key="normal" image="btn_yellow_off.png"/>
+                                <state key="highlighted" image="btn_yellow_on.png"/>
+                                <connections>
+                                    <action selector="yellowBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fj-PL-4CG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ue-k5-vzr">
+                                <rect key="frame" x="332" y="236" width="72" height="81"/>
+                                <state key="normal" image="btn_red_off.png"/>
+                                <state key="highlighted" image="btn_red_on.png"/>
+                                <connections>
+                                    <action selector="redBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sve-63-pgw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KlT-xf-kRu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Md-1P-Is6"/>
+                            <constraint firstItem="L5s-Qt-rbR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Xv-5Y-qzC"/>
+                            <constraint firstItem="fsE-Gb-1ej" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BHY-gI-CQ9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ebW-ar-0oZ" secondAttribute="bottom" constant="5" id="DZr-mb-lH4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L5s-Qt-rbR" secondAttribute="bottom" constant="5" id="Ffj-Yh-GFz"/>
+                            <constraint firstItem="amw-GZ-Zai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-54" id="Hls-SN-vBR"/>
+                            <constraint firstItem="3ue-k5-vzr" firstAttribute="leading" secondItem="L5s-Qt-rbR" secondAttribute="trailing" constant="70" id="Spl-Gt-g0S"/>
+                            <constraint firstItem="AED-FG-3vt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VKy-8P-fGd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ue-k5-vzr" secondAttribute="bottom" constant="3" id="aSk-af-5P3"/>
+                            <constraint firstItem="AED-FG-3vt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="alq-fg-Eah"/>
+                            <constraint firstItem="KlT-xf-kRu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ax0-vQ-3OP"/>
+                            <constraint firstItem="L5s-Qt-rbR" firstAttribute="leading" secondItem="ebW-ar-0oZ" secondAttribute="trailing" constant="52" id="bMH-Wq-cZF"/>
+                            <constraint firstItem="amw-GZ-Zai" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kae-1U-PTF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amw-GZ-Zai" secondAttribute="trailing" constant="-74" id="mZE-NR-7aC"/>
+                            <constraint firstItem="fsE-Gb-1ej" firstAttribute="top" secondItem="KlT-xf-kRu" secondAttribute="bottom" constant="8" id="vaA-Qr-uQx"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="fsE-Gb-1ej" id="wVh-3c-yvq"/>
+                        <outlet property="signalImageView" destination="KlT-xf-kRu" id="30i-G2-Jgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="568" height="320"/>
+        <image name="btn_blue_off.png" width="72" height="81"/>
+        <image name="btn_blue_on.png" width="72" height="74"/>
+        <image name="btn_red_off.png" width="72" height="81"/>
+        <image name="btn_red_on.png" width="72" height="74"/>
+        <image name="btn_yellow_off.png" width="72" height="81"/>
+        <image name="btn_yellow_on.png" width="72" height="74"/>
+        <image name="signal_blue.png" width="265" height="82"/>
+    </resources>
 </document>
